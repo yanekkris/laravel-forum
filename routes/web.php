@@ -17,4 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/questions', 'QuestionController@view')->name('questions.index');
+Route::get('/questions', 'QuestionController@index')->name('questions.index');
+Route::get('/questions/{id}', 'QuestionController@show')->name('questions.show');
